@@ -83,7 +83,7 @@ A modern, headless Next.js website powered by Directus CMS. This project showcas
 
    ```bash
    git clone <repository-url>
-   cd directus-1
+   cd zid-grow-website
    ```
 
 2. **Install dependencies**
