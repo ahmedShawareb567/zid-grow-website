@@ -1,0 +1,24 @@
+services:
+  directus:
+    image: directus/directus
+    env_file:
+      - .env
+    ports:
+      - "${ADMIN_PORT}:${ADMIN_PORT}"
+    volumes:
+      - ./directus/uploads:/directus/uploads
+      - ./directus/extensions:/directus/extensions
+      - ./directus/cache:/directus/.cache
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./directus/db:/var/lib/postgresql/data
