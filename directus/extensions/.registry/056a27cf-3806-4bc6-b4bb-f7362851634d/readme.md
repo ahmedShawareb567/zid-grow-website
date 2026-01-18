@@ -18,12 +18,11 @@ A powerful SEO management extension that helps you optimize your content for sea
 **Interface** (shown in the item view)
 
 ![SEO Interface](https://raw.githubusercontent.com/directus-labs/extensions/main/packages/seo-plugin/docs/seo-plugin-interface.png)
-*Note: The interface now uses tabs for better organization (Basic, Advanced, Custom Fields, Keyphrase).*
+_Note: The interface now uses tabs for better organization (Basic, Advanced, Custom Fields, Keyphrase)._
 
 **Display** (shown in the layout view)
 
 ![SEO Display](https://raw.githubusercontent.com/directus-labs/extensions/main/packages/seo-plugin/docs/seo-plugin-display-ideal.png)
-
 
 ## SEO Data 📝
 
@@ -38,20 +37,23 @@ A powerful SEO management extension that helps you optimize your content for sea
 - **Analysis**: Provides feedback on the keyphrase's presence and usage in the title, meta description, URL slug, and main content fields. Highlights problems, improvements, and good results.
 
 #### Social Media
+
 - **OG Image**: The image that appears when your page is shared on social media. Crucial for increasing social engagement.
 - **Social Previews**: Visualizes how the content will look when shared on different platforms.
 
 #### Search Engine Controls
+
 - **No Index**: Tells search engines not to show this page in search results
 - **No Follow**: Prevents search engines from following links on the page
 
 #### Sitemap Settings
+
 - **Change Frequency**: How often the page is updated (options: always, hourly, daily, weekly, monthly, yearly, never)
 - **Priority**: Page importance relative to other pages (0.0 to 1.0, default: 0.5)
 
 #### Additional Fields
-- **Additional Fields**: Custom SEO fields for specific needs (like canonical URLs, custom meta tags, JSON-LD, etc.)
 
+- **Additional Fields**: Custom SEO fields for specific needs (like canonical URLs, custom meta tags, JSON-LD, etc.)
 
 ### Data Structure 📦
 
@@ -61,20 +63,20 @@ OG Image stores the UUID of the uploaded image. You'll want to make sure your fr
 
 ```json
 {
-	"title": "This is the Directus SEO Plugin.",
-	"meta_description": "A powerful SEO management extension that helps you optimize your content for search engines and social media sharing, right within Directus. It includes a comprehensive interface for managing metadata and a display component for monitoring SEO status.",
-	"og_image": "f5d20d13-e86a-4aaa-ab1c-241925b89ea3",
-	"focus_keyphrase": "Directus SEO",
-	"additional_fields": {
-		"canonical_url": "https://directus.io/",
-		"custom_meta_tag": "This is a custom meta tag"
-	},
-	"sitemap": {
-		"change_frequency": "monthly",
-		"priority": "0.5"
-	},
-	"no_index": false,
-	"no_follow": false
+  "title": "This is the Directus SEO Plugin.",
+  "meta_description": "A powerful SEO management extension that helps you optimize your content for search engines and social media sharing, right within Directus. It includes a comprehensive interface for managing metadata and a display component for monitoring SEO status.",
+  "og_image": "f5d20d13-e86a-4aaa-ab1c-241925b89ea3",
+  "focus_keyphrase": "Directus SEO",
+  "additional_fields": {
+    "canonical_url": "https://directus.io/",
+    "custom_meta_tag": "This is a custom meta tag"
+  },
+  "sitemap": {
+    "change_frequency": "monthly",
+    "priority": "0.5"
+  },
+  "no_index": false,
+  "no_follow": false
 }
 ```
 
@@ -83,23 +85,24 @@ OG Image stores the UUID of the uploaded image. You'll want to make sure your fr
 The SEO plugin consists of two components:
 
 ### 1. SEO Interface
+
 The interface provides a comprehensive form, organized into tabs, for managing SEO metadata:
 
 - **Basic Tab**:
-    - Page Title field with character count and optimal length validation (45-60 characters)
-    - Meta description with validation (130-160 characters)
-    - Search result preview
-    - Social media Open Graph (OG) image upload
-    - Social media share previews (new!)
+  - Page Title field with character count and optimal length validation (45-60 characters)
+  - Meta description with validation (130-160 characters)
+  - Search result preview
+  - Social media Open Graph (OG) image upload
+  - Social media share previews (new!)
 - **Advanced Tab**:
-    - Search engine visibility controls (No Index, No Follow)
-    - Sitemap configuration options
+  - Search engine visibility controls (No Index, No Follow)
+  - Sitemap configuration options
 - **Custom Fields Tab**:
-    - Support for adding custom SEO-related fields (e.g., canonical URL, custom meta tags)
+  - Support for adding custom SEO-related fields (e.g., canonical URL, custom meta tags)
 - **Keyphrase Tab** (new!):
-    - Input for the focus keyphrase
-    - Detailed analysis of keyphrase usage in title, description, slug, and content
-    - Feedback categorized into Problems, Improvements, and Good results
+  - Input for the focus keyphrase
+  - Detailed analysis of keyphrase usage in title, description, slug, and content
+  - Feedback categorized into Problems, Improvements, and Good results
 
 ![SEO Interface Progress Bar](https://raw.githubusercontent.com/directus-labs/extensions/main/packages/seo-plugin/docs/seo-plugin-interface-progress.png)
 
@@ -112,6 +115,7 @@ To populate the title or meta description fields, with the template, use the `Ap
 ### 2. SEO Display
 
 A compact status indicator that shows:
+
 - Overall SEO health status
 - Quick overview of missing or invalid fields
 - Search preview on hover (optional)
@@ -192,7 +196,6 @@ The display component can be configured with:
    - Shows how the page might appear in search results
    - Disabled by default
 
-
 ## Installation
 
 Install the extension from the Directus Marketplace. See the [Official Guide](https://docs.directus.io/extensions/installing-extensions.html) for more information.
@@ -206,10 +209,12 @@ npm install @directus-labs/seo-plugin
 ## Roadmap 🗺️
 
 **Planned:**
+
 - Support for translating the title and meta description fields
 - Field label and description translations
 
 **Maybe:**
+
 - Add support for relational fields in the template
 
 ## Contributing 🤝

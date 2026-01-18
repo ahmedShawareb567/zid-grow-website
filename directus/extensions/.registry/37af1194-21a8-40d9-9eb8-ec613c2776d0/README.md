@@ -10,15 +10,14 @@ the default accordion group. This is a fork from [hanneskuettner/directus-extens
 
 ## What's New in v3
 
-* Support for unlimited tabs
-* Support for smaller screens
-* Updated dependancies
-* Re-enabled field key input for user friendly appearence in filters
+- Support for unlimited tabs
+- Support for smaller screens
+- Updated dependancies
+- Re-enabled field key input for user friendly appearence in filters
 
 ## Installation
 
 Add `directus-extension-group-tabs-interface` to your project:
-
 
 ```shell
 # Using pnpm
@@ -39,6 +38,5 @@ Alternatively you can change the interface of an existing group field in the
 ### Options
 
 - `Overwrite Group Width`: If checked, force Directus to display the tab list in the "Fill Width" mode.
-Normally, the width option is not available for groups, but so far no problems have been encountered. Please open an
-issue if you encounter any visual bugs.
-
+  Normally, the width option is not available for groups, but so far no problems have been encountered. Please open an
+  issue if you encounter any visual bugs.
